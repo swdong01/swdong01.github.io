@@ -42,10 +42,72 @@ h1, h2, h3, h4, h5, h6,
     font-weight: 400;
 }
 
+/* Navbar tint. Given as raw RGB so the alpha below keeps the frosted-glass
+   effect. Swap these three numbers to recolour the bar:
+     50, 35, 27    deep espresso (current)
+     35, 45, 75    UVA navy
+     44, 58, 46    deep forest green
+     43, 43, 43    charcoal                                                   */
+:root {
+    --navbar-tint: 50, 35, 27;
+
+    /* Links share the navbar's hue but sit much lighter. The navbar tint itself
+       is near-black, so using it verbatim would make links indistinguishable
+       from body text (#212529) and nothing would look clickable. */
+    --link-color: #6e4630;
+    --link-hover: #472c1d;
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover,
+a:focus {
+    color: var(--link-hover);
+}
+
+/* The year rail on the Publications page is .nav-pills, whose active pill is
+   Bootstrap blue. Scrollspy switches it as you scroll, so it has to match. */
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background-color: rgba(var(--navbar-tint), 0.92);
+    color: #fff;
+}
+
+/* Only rendered if a WeChat QR code is configured, but keep it in family. */
+.btn-primary {
+    background-color: rgba(var(--navbar-tint), 0.92);
+    border-color: rgba(var(--navbar-tint), 0.92);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: rgb(var(--navbar-tint));
+    border-color: rgb(var(--navbar-tint));
+}
+
 .navbar {
-    background-color: rgba(255, 255, 255, 0.6) !important;
+    background-color: rgba(var(--navbar-tint), 0.92) !important;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
+}
+
+/* Bootstrap dims inactive links to 50% white, which reads as muddy on a warm
+   dark tint. Lift them, and keep the current page at full white. */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .active > .nav-link {
+    color: #fff;
+}
+
+.navbar-dark .navbar-toggler {
+    color: rgba(255, 255, 255, 0.85);
+    border-color: rgba(255, 255, 255, 0.25);
 }
 
 .inline-badge {
@@ -90,4 +152,58 @@ div.lazy {
 
 .email-text {
     font-family: Source Code Pro, monospace;
+}
+
+/* Circular portrait. The container crops to a 1:1 circle so a non-square
+   photo is centre-cropped instead of squashed into an ellipse. */
+.avatar-container {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 0.8rem;  /* matches the card corners; use 50% for a circle */
+    overflow: hidden;
+    margin: 0 auto;
+    border: 2px solid #dee2e6;
+    background-color: #fff;
+}
+
+.avatar-container .avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Education / Experience / Honors & Awards. Bootstrap's .small (0.875rem) reads
+   cramped in these lists, so nudge the whole card up a step. */
+.experience-card h6 {
+    font-size: 1.1rem;
+    margin-bottom: 0.65rem;
+}
+
+.experience-card .media-body > div:first-child {
+    font-size: 1.02rem;
+    line-height: 1.45;
+}
+
+.experience-card .small {
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+.experience-card li {
+    margin-bottom: 0.55rem !important;
+}
+
+.experience-card .mx-2 {
+    margin-bottom: 1rem !important;
+}
+
+/* Publication covers. Figures come in wildly different aspect ratios, so pin
+   every thumbnail to the same 3:2 box (matching empty_300x200.png, the lazy
+   placeholder) and fit the whole figure inside rather than cropping it. */
+.publication-cover {
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+    background-color: #fff;
 }

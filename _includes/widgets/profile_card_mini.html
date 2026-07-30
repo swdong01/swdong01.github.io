@@ -6,16 +6,20 @@
                     <div class="col">
                         {% if site.data.profile.portrait_url %}
                         <!-- When the screen is wider than md, float the portrait on the right -->
-                        <div class="figure d-none d-md-block">
-                            <img 
-                                src="{{ site.data.profile.portrait_url | relative_url }}" 
-                                class="figure-img img-fluid" 
-                                data-toggle="tooltip" 
-                                data-placement="top" 
-                                title="{{ site.data.profile.portrait_caption }}">
+                        <div class="mb-3 d-none d-md-block">
+                            <div class="avatar-container shadow-sm">
+                                <img
+                                    src="{{ site.data.profile.portrait_url | relative_url }}"
+                                    class="avatar-img"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="{{ site.data.profile.portrait_caption }}">
+                            </div>
                         </div>
-                        <div class="mb-3 d-md-none text-center">
-                            <img src="{{ site.data.profile.portrait_url | relative_url }}" class="rounded-circle" style="max-width: 50%;" alt="Portrait">
+                        <div class="mb-3 d-md-none">
+                            <div class="avatar-container shadow-sm" style="max-width: 50%;">
+                                <img src="{{ site.data.profile.portrait_url | relative_url }}" class="avatar-img" alt="Portrait">
+                            </div>
                         </div>
                         {% endif %}
                     </div>

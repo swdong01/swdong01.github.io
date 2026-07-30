@@ -3,11 +3,14 @@ pages:
 #       For example, the `navbar_title` field in `showcase.html` is "Showcase" and the `name` field here should also be "Showcase"
 - name: Home
   url: /
-- name: Home (Layout 2)
-  url: /index_layout2
 - name: Publications
   url: /publications
-- name: Blog
-  url: /blog
-- name: Showcase
-  url: /showcase
+
+# Hidden for now. To bring one back, uncomment its entry here AND remove the
+# `published: false` line from the matching page's front matter.
+# - name: Home (Layout 2)
+#   url: /index_layout2
+# - name: Blog
+#   url: /blog
+# - name: Showcase
+#   url: /showcase
