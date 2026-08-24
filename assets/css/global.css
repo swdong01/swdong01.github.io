@@ -207,3 +207,10 @@ div.lazy {
     object-fit: contain;
     background-color: #fff;
 }
+
+/* Publication cards read title > meta > blurb. The template ships authors,
+   venue and blurb all at Bootstrap's .small, which flattens that ladder. */
+.publication-meta {
+    font-size: 1rem;
+    line-height: 1.45;
+}
