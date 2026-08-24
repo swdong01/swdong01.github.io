@@ -182,7 +182,7 @@ div.lazy {
 }
 
 .experience-card .media-body > div:first-child {
-    font-size: 1.02rem;
+    font-size: 1rem;
     line-height: 1.45;
 }
 
@@ -211,6 +211,6 @@ div.lazy {
 /* Publication cards read title > meta > blurb. The template ships authors,
    venue and blurb all at Bootstrap's .small, which flattens that ladder. */
 .publication-meta {
-    font-size: 1.02rem;
+    font-size: 1rem;
     line-height: 1.45;
 }
