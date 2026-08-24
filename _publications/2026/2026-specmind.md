@@ -7,6 +7,7 @@ pub_date:       "2026"
 abstract: >-
   A multi-agent hybrid RAG system that routes spectrum questions to specialised agents over license
   records, regulations, and proceeding filings, then composes one grounded answer.
+cover:          /assets/images/publications/specmind.jpg
 authors:
   - Songwei Dong*
   - Bingyan Lu*
