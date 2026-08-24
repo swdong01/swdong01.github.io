@@ -5,9 +5,8 @@ selected:       true
 pub:            "IEEE Global Communications Conference (GLOBECOM)"
 pub_date:       "2026"
 abstract: >-
-  Spectrum questions span structured license records, in-force regulations, and proceeding filings, and no
-  single retrieval method serves all three well. SpecMind puts a supervisor over three specialised agents,
-  one per source, and composes their evidence into a single grounded answer.
+  A multi-agent hybrid RAG system that routes spectrum questions to specialised agents over license
+  records, regulations, and proceeding filings, then composes one grounded answer.
 authors:
   - Songwei Dong*
   - Bingyan Lu*

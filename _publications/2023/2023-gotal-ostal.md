@@ -7,10 +7,8 @@ pub_date:       "2023"
 semantic_scholar_id: ecb33e910e18d81bcaedfd10fd84bc261811569a  # drives the citation-count badge
 cover:          /assets/images/publications/gotal.jpg
 abstract: >-
-  Open-set temporal action localization has to transfer knowledge from known actions to unknown ones,
-  where limited training data and overparameterized networks generalize poorly. GOTAL pairs a Transformer
-  action model with an open-set detection head and trains it under sharpness minimization, reaching
-  state-of-the-art results on THUMOS14 and ActivityNet1.3.
+  A one-stage open-set temporal action localization framework trained under sharpness-aware
+  minimization, setting state of the art on THUMOS14 and ActivityNet1.3.
 authors:
   - Junshan Hu
   - Liansheng Zhuang

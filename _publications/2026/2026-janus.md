@@ -5,10 +5,8 @@ selected:       true
 pub:            "Conference on Empirical Methods in Natural Language Processing (EMNLP), Main Conference"
 pub_date:       "2026"
 abstract: >-
-  Memory systems usually deploy every locally generated update, so a change that helps the current task
-  can quietly overwrite useful knowledge. Janus is a method-agnostic plug-in controller that decides
-  whether to accept or reject each candidate update, improving average accuracy by 2.7 to 4.6 points
-  across six datasets, two backbone LLMs, and two memory updaters.
+  A plug-in controller that decides whether each candidate memory update is worth deploying, adding
+  2.7 to 4.6 accuracy points on top of existing memory updaters.
 cover:          /assets/images/publications/janus.jpg
 authors:
   - Zihan Chen
