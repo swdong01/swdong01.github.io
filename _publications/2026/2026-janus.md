@@ -2,7 +2,7 @@
 title:          "The Past Is Prologue: A Plug-in Controller for Selective Updates in Sequentially Evolving LLM Memory"
 date:           2026-06-30 00:01:00 -0400
 selected:       true
-pub:            "arXiv preprint"
+pub:            "Conference on Empirical Methods in Natural Language Processing (EMNLP), Main Conference"
 pub_date:       "2026"
 abstract: >-
   Memory systems usually deploy every locally generated update, so a change that helps the current task
