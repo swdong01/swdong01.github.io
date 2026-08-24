@@ -4,7 +4,9 @@ date:           2023-11-01 00:01:00 -0400
 selected:       false  # older work in a different area; listed on the Publications page only
 pub:            "Information Sciences"
 pub_date:       "2023"
-semantic_scholar_id: 04c0ce1e868fa57957c0fd8859ec5d74ed5b31be  # drives the citation-count badge
+abstract: >-
+  A hybrid MCDM model combining CRITIC, MABAC, and k-means, whose Monte Carlo step resolves
+  disagreeing clustering runs; demonstrated on transport safety across the ASEAN region.
 cover:          /assets/images/publications/hybrid-mcdm.jpg
 authors:
   - Haizhou Cui

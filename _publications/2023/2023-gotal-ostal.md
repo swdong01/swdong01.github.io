@@ -4,7 +4,6 @@ date:           2023-10-26 00:01:00 -0400
 selected:       false  # older work in a different area; listed on the Publications page only
 pub:            "ACM International Conference on Multimedia (ACM MM)"
 pub_date:       "2023"
-semantic_scholar_id: ecb33e910e18d81bcaedfd10fd84bc261811569a  # drives the citation-count badge
 cover:          /assets/images/publications/gotal.jpg
 abstract: >-
   A one-stage open-set temporal action localization framework trained under sharpness-aware
