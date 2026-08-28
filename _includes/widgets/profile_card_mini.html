@@ -25,10 +25,18 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col text-center h4">
+                    <div class="col text-center h4 mb-1">
                         {{ site.data.profile.primary_name }}
                     </div>
                 </div>
+
+                {% if site.data.profile.pronouns %}
+                <div class="row">
+                    <div class="col text-center text-muted profile-pronouns mb-2">
+                        {{ site.data.profile.pronouns }}
+                    </div>
+                </div>
+                {% endif %}
 
                 <div class="row small">
                     <div class="col text-center">
