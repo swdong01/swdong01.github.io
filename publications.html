@@ -11,10 +11,18 @@ body_attr: >-
 <div class="row">
     <div class="col-12 col-lg-10">
         {% for year in pubs_by_year %}
-        {% assign num_papers = year.items | size %}
+        {%- comment -%}
+        Within a year, papers still under review sink to the bottom, below everything
+        that has actually appeared. Set `under_review: true` in a publication's front
+        matter to opt in; its `date` then only decides which year it lands in and how
+        it orders against the other submissions.
+        {%- endcomment -%}
+        {% assign year_published = year.items | where_exp: "item", "item.under_review != true" %}
+        {% assign year_in_review = year.items | where_exp: "item", "item.under_review == true" %}
+        {% assign year_ordered = year_published | concat: year_in_review %}
         <h2 class="pt-4" id="year-{{ year.name }}">{{ year.name }}</h2>
         <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
-            {% for item in year.items %}
+            {% for item in year_ordered %}
                 {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
             {% endfor %}
         </div>
