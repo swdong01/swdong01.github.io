@@ -219,3 +219,10 @@ div.lazy {
 .profile-pronouns {
     font-size: 0.9rem;
 }
+
+/* Link row ([arXiv], [DOI], [Project Page]) under each publication. Bootstrap's
+   .small makes these clickable targets fiddly, so lift them a step -- but keep
+   them under .publication-meta (1rem) so the title > meta > links ladder holds. */
+.abstract-links {
+    font-size: 0.95rem;
+}
