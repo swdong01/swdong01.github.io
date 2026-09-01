@@ -14,4 +14,6 @@ authors:
   - Makayla Kienlen
   - J. Nicholas Laneman
   - Cong Shen
+links:
+  Project Page: https://specmindrag.github.io
 ---
