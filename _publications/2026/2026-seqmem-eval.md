@@ -2,8 +2,8 @@
 title:          "Is One Score Enough? Rethinking the Evaluation of Sequentially Evolving LLM Memory"
 date:           2026-05-14 00:01:00 -0400
 selected:       true
-pub:            "arXiv preprint"
-pub_date:       "2026"
+pub:            "NeurIPS 2026 Workshop"
+pub_last:       "(Accepted)"
 abstract: >-
   A diagnostic framework for LLM memory that separates online utility, generalization, backward
   transfer, and forgetting, showing that headline accuracy often hides substantial forgetting.
